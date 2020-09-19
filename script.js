@@ -50,7 +50,15 @@ function writePassword() {
   }
 
 
-function generatePassword()
+function generatePassword(){
+  passwordOutput =""
+
+  for(var i=0; i < inputLength; i++) {
+
+  }
+
+
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", playersQuestions);
