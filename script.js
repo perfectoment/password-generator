@@ -51,12 +51,14 @@ function writePassword() {
 
 
 function generatePassword(){
-  passwordOutput =""
+  var passwordOutput = ""
 
   for(var i=0; i < inputLength; i++) {
-
+    var randomizer = Math.floor(Math.random() * finalPassword.length);
+    passwordOutput = passwordOutput + finalPassword[randomizer];
   }
-
+  return passwordOutput;
+  
 
 }
 
