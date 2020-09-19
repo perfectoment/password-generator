@@ -42,18 +42,17 @@ function playersQuestions() {
   }
 
 function writePassword() {
-  var trueAnswers = playersQuestions();
-
-  if(trueAnswers) {
+  
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
   }
-}
 
-// function generatePassword()
+
+function generatePassword()
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", playersQuestions);
+generateBtn.addEventListener("click", writePassword);
 
