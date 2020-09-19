@@ -21,7 +21,7 @@ function playersQuestions() {
   var lowerCaseAnswer=confirm("Would you like to use lowercase letters?");
     if(lowerCaseAnswer){
       finalPassword.push.apply(finalPassword, lowerCase);
-}
+  }
      
   var upperCaseAnswer=confirm ("would you like to use upper case letters?");
     if(upperCaseAnswer){
@@ -31,12 +31,13 @@ function playersQuestions() {
   var numberCaseAnswer=confirm("would you like to use numbers?");
     if(numberCaseAnswer){
       finalPassword.push.apply(finalPassword, numberCase);
-}
+  }
      
   var specialCaseAnswer=confirm("would you like to use special characters?");
     if(specialCaseAnswer){
-      finalPassword.push.apply(finalPassword, specialCase);
+      finalPassword.push.apply(finalPassword, specialCase);  
   }
+    
 
 
   //   if(lowerCaseAnswer){
@@ -51,20 +52,20 @@ function playersQuestions() {
   //   else if(specialCaseAnswer){
   //     finalPassword.push.apply(finalPassword, specialCase);
   //   }
-
+  
       console.log(finalPassword);
   }
-    
-function writePassword() {
-  
+
+function writePassword() {  
+if(password !== undefined){  
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-  }
-
-
+}
+}
 function generatePassword(){
+
   var passwordOutput = ""
 
   for(i=0; i < inputLength; i++) {
