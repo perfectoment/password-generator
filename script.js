@@ -42,12 +42,13 @@ function playersQuestions() {
   }
 
 function writePassword() {
-  
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-  }
+  if(finalPassword){
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+
+    passwordText.value = password;
+    }
 
 
 function generatePassword(){
