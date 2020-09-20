@@ -1,36 +1,26 @@
 # Password Generator
 
-One Paragraph of project escription goes here
+I created a random password generator. The user is asked to define the length of the their password between 8 and 128 characters. Once that has been defined they can choose to have upper case, lower case, numbers or special characters included in their password. If they choose to have all four, all four types of characters will be reflected in their password.
 
-## Getting Started
+## Code Snippet of Password Randomizer
+```var passwordOutput = ""
+passwordOutput += passwordOutput.concat(finalRandom)
+for(i=0; i < inputLength-finalRandom.length; i++) { //inputlength subtracing finalRandom array to make first 4 be ensured
+  var randomizer = Math.floor(Math.random() * finalPassword.length);
+    passwordOutput += finalPassword[randomizer];
+  }
+  return passwordOutput;
+}//writing the function
+function writePassword() {    
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  
+  passwordText.value = password;
+}
+  ```
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+## Screenshot
+![Screenshot](assets/passwordgeneratorscreenshot.PNG "Password Generator")
 
 
 ## Built With
@@ -41,25 +31,19 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Deployed Link
 
-* [See Live Site](#)
+* [See Live Site](https://perfectoment.github.io/password-generator/)
 
 
-## Authors
+## Author
 
-* **YOUR NAME** 
+* **Ryan Nemec** 
 
-- [Link to Portfolio Site](#)
-- [Link to Github](https://github.com/)
-- [Link to LinkedIn](https://www.linkedin.com/)
+- [Link to Portfolio Site](https://perfectoment.github.io/Ryan-Portfolio/)
+- [Link to Github](https://github.com/perfectoment)
+- [Link to LinkedIn](https://www.linkedin.com/in/ryan-nemec-5a6b3a66/)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License 
 
-## Acknowledgments
-
-* Hat tip to anyone whose code, libraries, packages, or UI was used  / inspired from
-* Inspiration
-* etc
