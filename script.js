@@ -13,7 +13,7 @@ function playersQuestions() {
   inputLength = prompt ("How long would you like your password?");
   if(inputLength < 8 || inputLength > 128) {
     alert("That is not a valid choice"); 
-       return
+       return;
     
   }
   
@@ -56,13 +56,11 @@ function playersQuestions() {
       console.log(finalPassword);
   }
 
-function writePassword() {  
-if(password !== undefined){  
+function writePassword() {    
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-}
 }
 function generatePassword(){
 
