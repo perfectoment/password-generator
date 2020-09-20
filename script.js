@@ -5,11 +5,11 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("")
 var numberCase = "1234567890".split("")
 var specialCase = "!@#$%^&*+?".split("")
 var inputLength = 0;
-var finalPassword =[];
-var finalRandom =[];
+// var finalPassword =[];
+// var finalRandom =[];
 
 // Write password to the #password input
- 
+ //Questions to gain data and push to the two open arrays
 function generatePassword() {
   inputLength = prompt ("How long would you like your password?");
   inputLength=parseInt(inputLength);
@@ -18,7 +18,8 @@ function generatePassword() {
     alert("That is not a valid choice"); 
        return;  
   }
-  
+  var finalRandom =[];
+  var finalPassword =[];
   var lowerCaseAnswer=confirm("Would you like to use lowercase letters?");
     if(lowerCaseAnswer){
       finalPassword=finalPassword.concat(lowerCase);
@@ -47,22 +48,23 @@ function generatePassword() {
           finalRandom += specialCase[specialRand];  
   }
     
-
+//getting the arrays and generating random numbers
 var passwordOutput = ""
 passwordOutput += passwordOutput.concat(finalRandom)
-for(i=0; i < inputLength-finalRandom.length; i++) {
+for(i=0; i < inputLength-finalRandom.length; i++) { //inputlength subtracing finalRandom array to make first 4 be ensured
   var randomizer = Math.floor(Math.random() * finalPassword.length);
     passwordOutput += finalPassword[randomizer];
   }
   return passwordOutput;
-}
+}//writing the function
 function writePassword() {    
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   
   passwordText.value = password;
+
 }
-  
+
 
 
 
